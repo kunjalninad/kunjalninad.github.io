@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kunjal Ninad — Discretionary Equities Trader. Personal website with projects and contact info." />
+  <title>Kunjal Ninad</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.bunny.net/css?family=architects-daughter:400" rel="stylesheet" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="Sidebar with profile and navigation">
+    <img src="gojo.png" alt="Profile picture of Kunjal Ninad" class="profile-pic" />
+    <h1>Kunjal Ninad</h1>
+    <p class="subtitle">(he/hehe)</p>
+    <nav aria-label="Primary">
+      <a href="index.html">→ Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="content light-mode">
+    <div class="marquee" aria-hidden="true">
+      <p>このサイトの作者は君よりトレードが上手い。読めない？じゃあ、トレードもできないね。はははは…。</p>
+    </div>
+    
+    <div class="index-content">
+     <h1>Hi!<br>I'm Ninad.</h1>
+     <div class="index-text">
+     <p>Welcome to my website. I'm glad you're here. I made this website because:</p>
+        <ol>
+        <li>I wanted a place of my own.</li>
+        <li> I was on a diet and couldn't stomach the baloney served elsewhere in "professional" spaces ;)</li>
+        <li>And, well... it was a lot of fun!</li>
+        </ol>
+        
+     <p>I've tried to keep it clean, simple, and airy here, so do stick around :) </p>
+     </div>
+   </div>
+  </main>
+  
+  
+  <div class="theme-toggle" role="region" aria-label="Toggle light and dark mode">
+    <button type="button" aria-pressed="false" id="toggle-light">🌞</button> | 
+    <button type="button" aria-pressed="false" id="toggle-dark">🌙</button>
+  </div>
+
+  <script>
+    const content = document.querySelector('.content');
+    const lightBtn = document.getElementById('toggle-light');
+    const darkBtn = document.getElementById('toggle-dark');
+
+    lightBtn.addEventListener('click', () => {
+      content.classList.add('light-mode');
+      content.classList.remove('dark-mode');
+      lightBtn.setAttribute('aria-pressed', 'true');
+      darkBtn.setAttribute('aria-pressed', 'false');
+    });
+
+    darkBtn.addEventListener('click', () => {
+      content.classList.add('dark-mode');
+      content.classList.remove('light-mode');
+      darkBtn.setAttribute('aria-pressed', 'true');
+      lightBtn.setAttribute('aria-pressed', 'false');
+    });
+  </script>
+</body>
+</html>
+

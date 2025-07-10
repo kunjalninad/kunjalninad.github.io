@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kunjal Ninad — Discretionary Equities Trader. Personal website with projects and contact info." />
+  <title>Kunjal Ninad</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.bunny.net/css?family=architects-daughter:400" rel="stylesheet" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="Sidebar with profile and navigation">
+    <img src="gojo.png" alt="Profile picture of Kunjal Ninad" class="profile-pic" />
+    <h1>Kunjal Ninad</h1>
+    <p class="subtitle">(he/hehe)</p>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">→ About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Added light-mode class here for default -->
+  <main class="content light-mode">
+    <div class="marquee" aria-hidden="true">
+      <p>このサイトの作者は君よりトレードが上手い。読めない？じゃあ、トレードもできないね。はははは…。</p>
+    </div>
+         
+    <h1>About Me!</h1>
+    
+    <a href="resume.html" class="resume-link" target="_blank" style="font-family: 'Architects Daughter', cursive;">&gt;Click here for RESUME!</a>
+
+    <p>I’m a discretionary equities trader — meaning I trade stocks based on a mix of experience, intuition, and, occasionally, cat meows. (Just kidding. Mostly.)</p>
+
+    <p>I believe markets are chaotic and fundamentally unpredictable. No algorithm or system can operate without human judgment. In a world where Cristiano Ronaldo moving a Coke bottle can wipe out millions in market cap, I think it’s fair to say my little Python script can’t predict everything.</p>
+
+    <p>That said, I’m not some technophobe waving my cane at AI models. I love learning how computers work and using tech to enhance my trading. I even built my own trading simulator — before I realized TradingView already has one, for free. But for now, I’ll stick to discretion over equations.</p>
+
+    <p>Outside of trading, I try not to be a finance bro. I like great movies, good books, long walks, and spending time with friends. I’m not the kind of hustler who hires someone to do everything for him while he's making money. I make my own bed, brush my own teeth, and yes, I kiss my girlfriend myself. I don't want to hire a professional for that.</p>
+
+    <p>Oh, and I also cook. Wait - please don't fall in love with me just yet. I’m not 6'2, and I'm not a trust fund baby. I also don't have blue eyes T_T. <br>But I *do* have a guitar... just saying ;)</p>
+  </main>
+  
+  <div class="theme-toggle" role="region" aria-label="Toggle light and dark mode">
+    <button type="button" aria-pressed="true" id="toggle-light">🌞</button> | 
+    <button type="button" aria-pressed="false" id="toggle-dark">🌙</button>
+  </div>
+
+  <script>
+    const content = document.querySelector('.content');
+    const lightBtn = document.getElementById('toggle-light');
+    const darkBtn = document.getElementById('toggle-dark');
+
+    // Set ARIA pressed states correctly on load
+    // Default is light mode, so:
+    lightBtn.setAttribute('aria-pressed', 'true');
+    darkBtn.setAttribute('aria-pressed', 'false');
+
+    lightBtn.addEventListener('click', () => {
+      content.classList.add('light-mode');
+      content.classList.remove('dark-mode');
+      lightBtn.setAttribute('aria-pressed', 'true');
+      darkBtn.setAttribute('aria-pressed', 'false');
+    });
+
+    darkBtn.addEventListener('click', () => {
+      content.classList.add('dark-mode');
+      content.classList.remove('light-mode');
+      darkBtn.setAttribute('aria-pressed', 'true');
+      lightBtn.setAttribute('aria-pressed', 'false');
+    });
+  </script>
+</body>
+</html>
+

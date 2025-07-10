@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kunjal Ninad — Resume</title>
+<style>
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #222;
+    margin: 40px auto;
+    max-width: 800px;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  
+  h1, h2, h3 {
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    border-bottom: 3px solid #007acc;
+    padding-bottom: 6px;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 4px;
+    color: #007acc;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 24px;
+    color: #333;
+  }
+  
+  p {
+    margin: 0 0 18px 0;
+  }
+  
+  a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  
+  ul {
+    margin: 8px 0 18px 20px;
+    padding-left: 0;
+    list-style: none; /* remove default bullets */
+  }
+  
+  li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  /* Custom blue bullet */
+  li::before {
+    content: "•";
+    color: #007acc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+  }
+  
+  /* Contact info in header */
+  header {
+    margin-bottom: 40px;
+  }
+  .contact {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .contact a {
+    margin-right: 15px;
+    font-weight: 600;
+  }
+  
+  /* Section: Professional Summary */
+  .section-summary {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 36px;
+  }
+  
+  /* Skills & Tools: inline bullet style */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+    color: #333;
+  }
+  .skills-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .skills-list li::before {
+    content: "•";
+    color: #007acc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+  }
+  
+  /* Footer nav back link */
+  footer {
+    margin-top: 60px;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Kunjal Ninad</h1>
+  <p class="contact">
+    <a href="mailto:kunjal.ninad@gmail.com" aria-label="Email Kunjal Ninad">kunjal.ninad@gmail.com</a>
+    <a href="https://www.linkedin.com/in/kunjalninad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">linkedin.com/in/kunjalninad</a>
+    <span>India</span>
+  </p>
+</header>
+
+<section class="section-summary" aria-label="Professional Summary">
+  <p>Discretionary equities trader renowned for disciplined execution, nuanced market intuition, and rigorous risk management. Developed and refined proprietary trading simulation tools to sharpen strategy and psychological resilience before transitioning to industry-standard platforms like TradingView to execute high-conviction trades with precision. Demonstrated consistent ability to navigate complex market dynamics and capitalize on both long and short opportunities.</p>
+</section>
+
+<section class="section-experience" aria-label="Professional Experience">
+  <h2>Professional Experience</h2>
+  <h3>Independent Trader — Self-Directed <small>Aug 2024 – Present</small></h3>
+  <ul>
+    <li>Executed strategically planned long and short trades on U.S. equities across diverse sectors, combining deep fundamental analysis with advanced technical insights.</li>
+    <li>Designed a real-time trading simulator to rigorously model trade execution, slippage, commissions, and market impact — elevating pre-trade analysis and discipline.</li>
+    <li>Transitioned to TradingView as the primary execution and charting platform, leveraging its advanced tools for enhanced trade management and market monitoring.</li>
+    <li>Achieved a +50% return on a $10K account over 5 months (Jan–May 2025), reflecting consistent risk-adjusted performance.</li>
+    <li>Conduct ongoing market research, macroeconomic event analysis, and maintain detailed trade journaling for continuous performance improvement.</li>
+  </ul>
+</section>
+
+<section class="section-skills" aria-label="Key Skills and Tools">
+  <h2>Key Skills &amp; Tools</h2>
+  <ul class="skills-list" aria-label="Skills list">
+    <li>Equity Strategy Development</li>
+    <li>Trade Lifecycle & Execution</li>
+    <li>Capital & Risk Management</li>
+    <li>Technical & Fundamental Analysis</li>
+    <li>Market Psychology & Sentiment</li>
+    <li>Event-Driven & Volatility Trading</li>
+    <li>Simulated Execution & Backtesting</li>
+    <li>Trade Review & Psychological Discipline</li>
+  </ul>
+</section>
+
+<section class="section-project" aria-label="Technical Project">
+  <h2>Technical Project</h2>
+  <h3>Real-Time Trading Simulator (Python)</h3>
+  <ul>
+    <li>Built a sophisticated command-line trading simulator using Yahoo Finance’s live data with caching fallback, designed to mirror real-world market mechanics.</li>
+    <li>Programmed detailed trade execution parameters:
+      <ul>
+        <li>Slippage: 0.05% + $0.005/share</li>
+        <li>Commission: $1 + 0.1% trade value (capped at $10)</li>
+      </ul>
+    </li>
+    <li>Maintained live price cache and simulated comprehensive long and short position tracking with profit and loss accounting.</li>
+    <li>Utilized simulation insights to enhance real-trade decisions, improving both edge and emotional control under market pressure.</li>
+  </ul>
+</section>
+
+<section class="section-education" aria-label="Education">
+  <h2>Education</h2>
+  <p><strong>Bachelor of Business Administration (BBA)</strong><br />Indian Institute of Technology (IIT) Patna · 2024 – 2027</p>
+  <p><strong>BA (Hons.) Psychology</strong><br />Indira Gandhi National Open University (IGNOU) · 2023 – 2026</p>
+</section>
+
+<section class="section-certifications" aria-label="Certifications">
+  <h2>Certifications (Upcoming)</h2>
+  <ul>
+    <li>Chartered Financial Analyst (CFA) Level 1</li>
+    <li>Financial Risk Manager (FRM) Part I</li>
+    <li>Certified Market Technician (CMT) Level 1</li>
+  </ul>
+</section>
+
+<footer>
+  <p><a href="index.html">← Back to Home</a></p>
+</footer>
+
+</body>
+</html>
+
