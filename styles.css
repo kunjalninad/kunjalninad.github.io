@@ -1,0 +1,133 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global body styling */
+body {
+  display: flex;
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  height: 100vh;
+  color: #1c1208;
+  background: #2a1e1a; /* dark brown background */
+}
+
+/* Sidebar styling */
+nav.sidebar-nav {
+  width: 260px;
+  background: #1a120f; /* deep leathery brown */
+  border-right: 1px solid #100b07;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile photo section */
+.profile-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+  border: 3px solid #3e2c22;
+  display: block;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #f0e7dc;
+}
+
+/* Navigation links */
+nav.sidebar-nav a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #d3c4b3;
+  padding: 0.6rem 0;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav.sidebar-nav a:hover,
+nav.sidebar-nav a:focus-visible {
+  background-color: #382920;
+  color: #fff;
+  outline: none;
+}
+
+/* Main content area */
+main {
+  flex-grow: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+  max-width: 1000px;
+  margin-right: auto;
+  background: #f3e7d3; /* parchment tone */
+  color: #1c1208; /* deep ink-like tone */
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  border-radius: 8px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+main h1,
+main h2 {
+  font-family: 'Garamond', Georgia, serif;
+  color: #2b1b0f;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #d2b48c;
+  padding-bottom: 0.3rem;
+}
+
+/* Paragraphs */
+main p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+/* Emphasis */
+main em,
+main i {
+  color: #5c4033;
+  font-style: italic;
+}
+
+/* Links */
+main a {
+  color: #593d3b;
+  text-decoration: none;
+  transition: color 0.25s ease, text-decoration 0.25s ease;
+}
+
+main a:hover,
+main a:focus {
+  color: #000000;
+  text-decoration: underline;
+  outline: none;
+}
+
+ul, blockquote {
+  padding-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 1.5rem; /* <-- Add this */
+}
+
+
