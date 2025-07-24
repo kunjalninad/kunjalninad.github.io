@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>☸ Home</title>
+  <link href="https://fonts.bunny.net/css?family=quicksand:400,700" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <nav class="desktop-bar">
+    <div class="profile-icon" id="profileToggle">
+      <img src="pic.png" alt="Kunjal Ninad" />
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="selected">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="writings.html">Writings</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Profile Dropdown Menu -->
+  <div class="profile-dropdown" id="profileDropdown">
+    <img src="pic.png" alt="Profile" class="large-pic" />
+    <div class="profile-name">Kunjal Ninad<br>Equities Trader</div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <h1>🏠<br>Hey,<br>I'm Ninad.</h1>
+    <p>Welcome to my corner of the internet.
+      <br>I built this site as my digital home—a place to share thoughts, ideas, maybe a few market rants.
+      <br>This is where I think out loud, post updates, and occasionally go off the rails—it's mine, after all.
+      <br>Hope you enjoy the visit :)</p>
+
+    <p>
+      Here you won’t find any “synergizing paradigms” or “leveraging core competencies”<br>
+      — just real talk, real ideas, and maybe the occasional bad joke.
+      <br><br>
+      <i>except the résumé; that one's full of buzzwords ;)</i>
+    </p>
+  </main>
+
+  <!-- JS for Profile Dropdown -->
+  <script>
+    const profileIcon = document.getElementById('profileToggle');
+    const dropdown = document.getElementById('profileDropdown');
+
+    profileIcon.addEventListener('click', () => {
+      dropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!profileIcon.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
+

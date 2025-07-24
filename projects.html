@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects</title>
+  <link href="https://fonts.bunny.net/css?family=quicksand:400,700" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <nav class="desktop-bar">
+    <div class="profile-icon" id="profileToggle">
+      <img src="pic.png" alt="Kunjal Ninad" />
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="selected">Projects</a>
+      <a href="writings.html">Writings</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Profile Dropdown Menu -->
+  <div class="profile-dropdown" id="profileDropdown">
+    <img src="pic.png" alt="Profile" class="large-pic" />
+    <div class="profile-name">Kunjal Ninad<br>Equities Trader</div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <h1>🔨 Projects</h1>
+    <p>Right now, I’m working on a small book (or maybe more of a long lecture) where I break down the basics of the stock market — the kind of explanation I wish I had when I was just starting out.</p>
+    <p>It's meant to be simple, clear, and conversational. No jargon, no fluff — just the fundamentals, explained like a friend would.</p>
+    <p>It’s a work in progress, but it’s coming soon.</p>
+  </main>  
+
+  <!-- JS for Profile Dropdown -->
+  <script>
+    const profileIcon = document.getElementById('profileToggle');
+    const dropdown = document.getElementById('profileDropdown');
+
+    profileIcon.addEventListener('click', () => {
+      dropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!profileIcon.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
+
