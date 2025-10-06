@@ -1,0 +1,266 @@
+/* Font setup */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  background-color: #fefefe;
+  margin: 0;
+  padding: 0 1.5rem;
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  color: #002366;
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.nav-container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logo .tagline {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666; /* light gray */
+  margin-top: 0.25rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #002366;
+  font-weight: 500;
+  font-size: 0.95rem;
+  outline-offset: 3px;
+}
+nav a[aria-current="page"] {
+  color: #00194d;
+  font-weight: 600;
+}
+nav a:hover,
+nav a:focus {
+  color: #00194d;
+  outline: 2px solid #00194d;
+  outline-offset: 3px;
+  border-radius: 0px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #002366;
+  color: white;
+  padding: 8px 12px;
+  z-index: 100;
+  transition: top 0.3s ease;
+  font-size: 0.9rem;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Hero */
+.hero {
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+}
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #002366;
+}
+.hero h3 {
+  font-weight: 400;
+  color: #444;
+}
+.intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.button {
+  background-color: #002366;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.button:hover,
+.button:focus {
+  background-color: #00194d;
+  outline: none;
+}
+
+/* Main Content */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.section {
+  margin-bottom: 3rem;
+}
+.section h2,
+.section h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #002366;
+}
+.section h2 {
+  font-size: 1.75rem;
+}
+.section h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+.section p,
+ul li {
+  margin-bottom: 1.25rem;
+}
+ul {
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: #6e6e6e;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 4rem;
+}
+
+/* Utilities */
+a {
+  color: #002366;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline-offset: 2px;
+  outline: 2px solid #00194d;
+  border-radius: 0px;
+}
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+small {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Grid (for Projects/Goals/etc.) */
+.inline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+.card .label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+.card .value {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Table (for future use in models/data) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  nav a {
+    margin-left: 0;
+  }
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* essay display */
+.essay-list {
+  list-style: none;
+  padding: 0;
+}
+
+.essay-list li {
+  margin-bottom: 1.2rem;
+}
+
+.essay-list a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #002366;
+  text-decoration: none;
+}
+
+.essay-list a:hover {
+  color: var(--oxford-blue);
+}
+
+.date {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
